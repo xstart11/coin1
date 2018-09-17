@@ -1,0 +1,26 @@
+# /etc/conf.d/darald: config file for /etc/init.d/darald
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/daral/daral.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/darald"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/darald.pid"
+
+# Where to write darald data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/darald"
+
+# User and group to own darald process
+#BITCOIND_USER="daral"
+#BITCOIND_GROUP="daral"
+
+# Path to darald executable
+#BITCOIND_BIN="/usr/bin/darald"
+
+# Nice value to run darald under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

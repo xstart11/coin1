@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=DRL
+Comment=DRL P2P Cryptocurrency
+Exec=daral-qt %u
+Terminal=false
+Type=Application
+Icon=daral128
+MimeType=x-scheme-handler/daral;
+Categories=Office;Finance;
+Name[en_US]=daral-qt.desktop

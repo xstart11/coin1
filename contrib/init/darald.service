@@ -1,0 +1,26 @@
+[Unit]
+Description=DRL's distributed currency daemon
+After=network.target
+
+[Service]
+User=daral
+Group=daral
+
+Type=forking
+PIDFile=/var/lib/darald/darald.pid
+
+ExecStart=/usr/bin/darald -daemon -pid=/var/lib/darald/darald.pid \
+          -conf=/etc/daral/daral.conf -datadir=/var/lib/darald
+
+ExecStop=-/usr/bin/daral-cli -conf=/etc/daral/daral.conf \
+         -datadir=/var/lib/darald stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target
