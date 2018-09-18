@@ -108,8 +108,8 @@ public:
         nMinerThreads = 0;
         nTargetTimespan = 1 * 60;
         nTargetSpacing = 1 * 60;
-        nLastPOWBlock = 400;
-        nMaturity = 160;
+        nLastPOWBlock = 200;
+        nMaturity = 10;
         nMasternodeCountDrift = 20;
 	nMasternodeColleteralLimxDev = 2000; //Params().MasternodeColleteralLimxDev()
         nModifierUpdateBlock = 1; // we use the version 2 for dmd
@@ -129,17 +129,15 @@ public:
         genesis.nTime = 1535381305;
         genesis.nBits = 0x1e0ffff0;
         genesis.nNonce = 20995534;
-		
+
         hashGenesisBlock = genesis.GetHash();
 	//printf("%s\n", hashGenesisBlock.ToString().c_str());
 	//printf("%s\n", genesis.hashMerkleRoot.ToString().c_str());
         assert(hashGenesisBlock == uint256("0x0000023ccb9c1c361bf57ce5f4eddda894708bab224df1efeac9e05a433fd22b"));
         assert(genesis.hashMerkleRoot == uint256("0x12c5ee30a7da948ad28696d73e780972f1e2c6fdbb69cb1d9d38ab81114afa2c"));
-        
 
-        vSeeds.push_back(CDNSSeedData("1.daral.io", "1.daral.io"));
-        vSeeds.push_back(CDNSSeedData("2.daral.io", "2.daral.io"));
-        vSeeds.push_back(CDNSSeedData("3.daral.io", "3.daral.io"));
+
+        vSeeds.push_back(CDNSSeedData("172.81.135.155", "172.81.135.155"));
         //vFixedSeeds.clear();
         //vSeeds.clear();
 
@@ -167,7 +165,7 @@ public:
         nPoolMaxTransactions = 3;
         strSporkKey = "0478c3e932fbe183b2f665de937866cb1cfc5ed4b0bf733b72286f265ffc03ff52dfd669fbb3f77d630e5393da65c721a9a891d2c4c6aa515dfd25ffe545582357";
         strDarksendPoolDummyAddress = "Xq19GqFvajRrEdDHYRKGYjTsQfpV5jyipF";
-        nStartMasternodePayments = 1535381305; 
+        nStartMasternodePayments = 1535381305;
     }
 
     const Checkpoints::CCheckpointData& Checkpoints() const
@@ -276,7 +274,7 @@ public:
         genesis.nTime = 1535381307;
         genesis.nBits = 0x207fffff;
         genesis.nNonce = 2;
-		
+
         hashGenesisBlock = genesis.GetHash();
         nDefaultPort = 57123;
         assert(hashGenesisBlock == uint256("0x1c63916ba71c9e7c802b31b8aef5304ce4bf35b35503166847ce3ec2ff0a1f3e"));
